@@ -1,1 +1,1 @@
-web: gunicorn rgvdesign.wsgi
+web: gunicorn rgvdesign.wsgi --log-file -
