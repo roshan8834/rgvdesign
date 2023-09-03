@@ -1,0 +1,88 @@
+{% load static %}
+{%include "header.html" %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Services</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Services</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+        
+
+         <div class="row">
+
+          {% for services in interior_service_data %}
+          <div class="col-md-6">
+            <div class="icon-box">
+              <i class="{{services.service_icon}}"></i>
+              <h4><a href="#">{{services.service_heading}}</a></h4>
+              <p>{{services.service_desc}}</p>
+            </div>
+          </div>
+        {% endfor %}
+        
+          {% comment %}<div class="col-md-6">
+            <div class="icon-box">
+              <i class="bi bi-briefcase"></i>
+              <h4><a href="#">Space Planning</a></h4>
+              <p>Crafting Intelligent Spaces Through Innovative Space Planning. Our expertise lies in reshaping environments with strategic space planning. Whether it's optimizing a compact area or reimagining an expansive layout, we seamlessly blend functionality and aesthetics. Our meticulous approach ensures every inch is purposefully designed, creating harmonious spaces that inspire efficiency, collaboration, and comfort. Explore the art of spatial transformation with our unparalleled space planning solutions</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-card-checklist"></i>
+              <h4><a href="#">Skatching, Layout Design, Elevation and Drawing</a></h4>
+              <p>Bringing Imagination to Life: Our Design Expertise Unleashed. From initial sketches to intricate layout designs, elevations, and detailed drawings, we're your creative compass. Our team's mastery in translating ideas into visual marvels sets the stage for your project's success. With an acute eye for detail, we breathe life into concepts, ensuring precision in every line and curve. Discover the essence of design excellence as we shape your visions into stunning reality.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-bar-chart"></i>
+              <h4><a href="#">Illustration, 3D Imaging & Visualization</a></h4>
+              <p>Unveil the Extraordinary with Our Illustration, 3D Imaging & Visualization Services. Step into the realm of boundless creativity as we transform concepts into vivid realities. With meticulous illustration, cutting-edge 3D imaging, and immersive visualization, we bring your visions to life. Immerse yourself in a journey where ideas transcend imagination, providing a glimpse of the remarkable spaces that await. Elevate your perception of design with our transformative expertise</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-binoculars"></i>
+              <h4><a href="#">Lighting Design & Specification</a></h4>
+              <p>Illuminating Spaces with Mastery: Our Lighting Design & Specification Expertise. Lighting is the brushstroke that paints ambiance, and we are the artists behind the scenes. From conceptualizing enchanting lighting schemes to precise fixture specifications, we curate atmospheres that dance with brilliance. Our passion for enhancing spaces with light showcases a fusion of creativity and technical finesse, ensuring your environment radiates with unparalleled allure. Experience the art of illumination through our meticulous craftsmanship.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-brightness-high"></i>
+              <h4><a href="#">Custom Furniture and Cabinet Design</a></h4>
+              <p>Our Custom Furniture and Cabinet Design Mastery. Infuse your spaces with distinction through our bespoke creations. From artisanal furniture that narrates your style to meticulously designed cabinets that redefine functionality, we craft pieces that resonate with your essence. Explore the intersection of artistry and purpose as we bring your ideas to life, transforming rooms into personalized expressions of elegance and utility</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-calendar4-week"></i>
+              <h4><a href="#">Color Analysis & Consultation</a></h4>
+              <p>Unlock the Power of Color with Expert Analysis & Consultation. Colors shape emotions and perceptions, and we're the guides to your palette. Dive into a world where hues tell stories, as our precise analysis and consultation elevate your spaces. From harmonious blends that evoke serenity to bold statements that ignite creativity, we curate color schemes that resonate with your vision. Experience the transformative impact of color through our strategic expertise</p>
+            </div>
+          </div>
+          {% endcomment %}
+        </div> 
+
+      </div>
+    </section><!-- End Services Section -->
+    
+  </main><!-- End #main -->
+
+  {%include "footer.html" %}

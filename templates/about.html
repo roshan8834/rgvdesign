@@ -1,0 +1,167 @@
+
+{% include "header.html" %}
+
+<main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>About</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>About</li>
+        </ol>
+      </div>
+
+    </div>
+  </section><!-- End Breadcrumbs -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row content">
+         
+            <div class="col-lg-6">
+            {% for about_data in about_us_data %}
+              <h2>{{about_data.heading}}</h2>
+              <h3>{{about_data.description}}</h3>
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0">
+              <h3>About Us - Ragvi Design India Pvt. Ltd</h3>
+              <p>
+                {{about_data.about_me}}
+              </p>
+
+              <h3>Our Journey:</h3>
+              <p>
+                {{about_data.about_me_more}}
+              </p>
+
+              
+
+              <h3>Our Philosophy:</h3>
+              <p>
+                At Ragvi Design India Pvt. Ltd, we believe that every space has a story waiting to be told. Our philosophy revolves around blending aesthetics and practicality to curate interiors that not only dazzle the eyes but also enrich lives. Our designs are an embodiment of seamless functionality and aesthetic allure, creating a perfect balance between form and function
+              </p>
+
+              <h3>Mission:</h3>
+              <p>
+                Our mission is to craft interior spaces that evoke emotions, enhance experiences, and empower lifestyles. We aim to collaborate closely with our clients to understand their unique needs and preferences, translating them into designs that reflect their individuality while adhering to the highest standards of craftsmanship.
+              </p>
+
+              <h3>Vision:</h3>
+              <p>
+                Our vision is to be a driving force in the world of interior design, setting benchmarks for innovation, quality, and client satisfaction. We aspire to leave an indelible mark on every space we touch, redefining how people perceive and interact with their environments.
+              </p>
+
+              <h3>Our Approach:</h3>
+              <p>
+                At Ragvi Design India Pvt. Ltd, our approach is rooted in a holistic understanding of design, functionality, and the human experience. Our process involves:
+              </p>
+
+              <ul>
+                <li><i class="ri-check-double-line"></i> Comprehensive Client Collaboration: We prioritize understanding your desires and aspirations, ensuring that our designs reflect your vision.</li>
+                <li><i class="ri-check-double-line"></i> Innovative Concepts: Our team of seasoned designers continuously explores fresh ideas to deliver interiors that are unique and captivating.</li>
+                <li><i class="ri-check-double-line"></i> Attention to Detail: We believe that perfection lies in the details. Every element, from layout to décor, is meticulously curated to create a cohesive and harmonious space.</li>
+                <li><i class="ri-check-double-line"></i> Quality Craftsmanship: We partner with skilled artisans and professionals to execute our designs with the utmost precision and finesse.</li>
+              </ul>
+              <p class="fst-italic">
+                Join us in turning your spaces into living canvases of beauty, functionality, and inspiration.
+              </p>
+            </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Team</h2>
+          <p>Our Hardowrking Team</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="/static/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Walter White</h4>
+                <span>Chief Executive Officer</span>
+                <p>Explicabo voluptatem mollitia et repellat</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="/static/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Sarah Jhonson</h4>
+                <span>Product Manager</span>
+                <p>Aut maiores voluptates amet et quis</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="/static/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>William Anderson</h4>
+                <span>CTO</span>
+                <p>Quisquam facilis cum velit laborum corrupti</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="/static/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Amanda Jepson</h4>
+                <span>Accountant</span>
+                <p>Dolorum tempora officiis odit laborum officiis</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+   
+  </main><!-- End #main -->
+
+  {% include "footer.html" %}

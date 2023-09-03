@@ -1,0 +1,154 @@
+{% load static %}
+{% include "header.html" %}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        {% for hero in hero_data %}
+
+          <div class="carousel-item active" style="background-image: url(/media/{{hero.image}})">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown"> <span>{{hero.heading}}</span></h2>
+                <p class="animate__animated animate__fadeInUp">{{hero.description}}</p>
+                <a href="#portfolio" class="btn-get-started animate__animated animate__fadeInUp scrollto">Our Work</a>
+              </div>
+            </div>
+          </div>
+
+        {% endfor %}
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row content">
+          {% for about_data in about_us_data %}
+            <div class="col-lg-6">
+
+            
+              <h2>{{about_data.heading}}</h2>
+              <h3>{{about_data.description}}</h3>
+            
+              
+              {% comment %} <h2>Hire Us to Save Interior Budget</h2>
+              <h3>Welcome to our interior design expertise, where saving budget is our top priority. With our innovative solution, network and efficient strategies, we transform spaces while optimizing costs. Let us bring your vision to life.</h3> {% endcomment %}
+              </div>
+              <div class="col-lg-6 pt-4 pt-lg-0">
+                <h3>About Us - Ragvi Design India Pvt. Ltd</h3>
+                <p>
+                  {{about_data.about_me}}
+                </p>
+
+                <h3>Our Journey:</h3>
+                <p>
+                  {{about_data.about_me_more}}
+                </p>
+
+              </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients section-bg">
+      <div class="container">
+
+        <div class="row">
+          
+          {% for partner in our_partner_data %}
+           
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="/media/{{partner.logo}}" class="img-fluid" alt="">
+            </div> 
+          {% endfor %}
+           
+         
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="row">
+
+          {% for services in interior_service_data %}
+          
+          <div class="col-md-6">
+            <div class="icon-box">
+              <i class="{{services.service_icon}}"></i>
+              <h4><a href="#">{{services.service_heading}}</a></h4>
+              <p>{{services.service_desc}}</p>
+            </div>
+          </div>
+          {% endfor %}
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              
+              <li data-filter="*" class="filter-active">All</li>
+              {% for category_list in category %}
+                <li data-filter=".{{category_list.filter_name}}">{{category_list.category}}</li>
+              {% endfor %} 
+              
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+         
+          {% for image in image_list %}
+            <div class="col-lg-4 col-md-6 portfolio-item {{image.project.category.filter_name}}">
+              <div class="portfolio-wrap">
+                <img src="/media/{{image.image}}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{{image.project.short_address}}</h4>
+                  <p>{{image.project.category}}</p>
+                  <div class="portfolio-links">
+                    <a href="/media/{{image.image}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title={{image.project.short_address}}><i class="bx bx-plus"></i></a>
+                    <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+  </main><!-- End #main -->
+
+{% include "footer.html" %}
+  
