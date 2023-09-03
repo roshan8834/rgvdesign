@@ -30,7 +30,7 @@ class ProjectImage(models.Model):
     project=models.ForeignKey(InteriorProjects,on_delete=models.CASCADE)
     image=models.ImageField(upload_to='project_image/',max_length=250,null=True,default=None)
     def __str__(self) -> str:
-        return self.project
+        return self.project.name
 
 class HeroSection(models.Model):
     heading=models.CharField(max_length=100)
