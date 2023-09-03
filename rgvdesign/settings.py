@@ -9,8 +9,9 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
 from pathlib import Path
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -131,8 +132,4 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "/media/"
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'roshansetfly@gmail.com'
-EMAIL_HOST_PASSWORD = 'sadhnafly'
-EMAIL_USE_TLS = True
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
