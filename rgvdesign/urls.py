@@ -32,13 +32,13 @@ urlpatterns = [
     path('about/',views.aboutUs),
     path('',views.homePage),
     path('portfolio/',views.portfolio),
+    path('portfolio-detail/',views.portfolioDetail,name='portfolio-detail'),
     path('contact/',views.contactUs),
     path('service/',views.services),
     path('saveenquiry/',views.saveEnquiry,name='saveenquiry'),
     re_path(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
     re_path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
-    #url(r'^media/(?p<path>.*)$',serve,{'document_root': settings.MEDIA_ROOT}),
-    #url(r'^static/(?p<path>.*)$',serve,{'document_root': settings.STATIC_ROOT}),
+   
 ]
 #urlpatterns=urlpatterns+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 #if settings.DEBUG:

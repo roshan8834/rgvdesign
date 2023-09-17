@@ -132,6 +132,9 @@ def portfolio(request):
     
     return render(request,"portfolio.html",portfolio)
 
+def portfolioDetail(request):
+     return render(request,"portfolio-details.html")
+
 def services(request):
     service_data=InteriorService.objects.all()
     category=ProjectCategory.objects.all()
